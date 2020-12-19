@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Config from "../config/config";
+import Config from "../../config/config";
 
 export default function Home() {
   const [data, setData] = useState();

@@ -70,7 +70,7 @@ export default function Home() {
                     };
 
                     await fetch(
-                      "http://localhost:4000/updatereservation",
+                      `${Config.url}/updatereservation`,
                       requestOptions
                     )
                       .then((response) => response.json())

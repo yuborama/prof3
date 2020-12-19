@@ -16,26 +16,31 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      {data.map((item) => (
-        <div
-          className={styles.movie}
-          style={{
-            backgroundImage: `url('${item.imagen}')`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className={styles.movieContainer}>
-            <span className={styles.titleMovie}>{item.titulo}</span>
-            <span className={styles.categoryMovie}>{item.categoria}</span>
-            <span className={styles.descMovie}>{item.description}</span>
-          </div>
-        </div>
-      ))}
-      <Link href="reserva">
-        <a className={styles.buttonReservation}>Reservar Pelicula</a>
-      </Link>
+    <div className={styles.containerFull}>
+      <span className={styles.titlePage}>Catalogo</span>
+
+      <div className={styles.container}>
+        {data.map((item) => (
+          <Link href={`/pelicula/${item._id}`}>
+            <div
+              className={styles.movie}
+              style={{
+                backgroundImage: `url('${item.imagen}')`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
+              <div className={styles.movieContainer}>
+                <span className={styles.titleMovie}>{item.titulo}</span>
+                <span className={styles.categoryMovie}>{item.categoria}</span>
+              </div>
+            </div>
+          </Link>
+        ))}
+        <Link href="reserva">
+          <a className={styles.buttonReservation}>Reservar Pelicula</a>
+        </Link>
+      </div>
     </div>
   );
 }

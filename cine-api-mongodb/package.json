@@ -1,5 +1,5 @@
 {
-  "name": "cine-apimongo",
+  "name": "lago-park-api-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/mileastrid/lago-park-api-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "f"
+    "url": "https://github.com/mileastrid/lago-park-api-project/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/mileastrid/lago-park-api-project#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",

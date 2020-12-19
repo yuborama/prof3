@@ -24,3 +24,13 @@ export const getMovie = async (req: Request, res: Response) => {
 
   return res.status(200).send({ data: getAllMovies });
 };
+
+export const getByIdMovie = async (req: Request, res: Response) => {
+  const { id } = req.body;
+  try {
+    const getByIdMovie = await Movie.findOne({ _id: id });
+    return res.status(200).send(getByIdMovie);
+  } catch (error) {
+    return res.status(400);
+  }
+};
